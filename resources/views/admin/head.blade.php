@@ -10,3 +10,12 @@
   <link rel="stylesheet" href="/template/admin/plugins/icheck-bootstrap/icheck-bootstrap.min.css">
   <!-- Theme style -->
   <link rel="stylesheet" href="/template/admin/dist/css/adminlte.min.css">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+  <script src="https://cdn.ckeditor.com/4.23.0-lts/standard/ckeditor.js"></script>
+  
+  <meta name="csrf-token" content="{{ csrf_token() }}">
+
+
+  @yield('head')

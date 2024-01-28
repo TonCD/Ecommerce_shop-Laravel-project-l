@@ -5,6 +5,7 @@ namespace App\Http\Controllers\Admin\Users;
 use App\Http\Controllers\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 
 class LoginController extends Controller
 {
@@ -25,6 +26,7 @@ class LoginController extends Controller
         ], $request->input('remember'))){
             return redirect()->route('admin')->with('success','');
         }
+        Session::flash('error', 'Email or password is incorrect');
         return redirect()->back();
     }
 }
